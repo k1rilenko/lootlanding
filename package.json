@@ -32,16 +32,6 @@
     "major": "gulp major",
     "prepush": "npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@bitbucket.org:imediasolutionsby/project-front-template-jade.git"
-  },
-  "author": "Nickolai Kushner <nickolaikushner@gmail.com> (https://github.com/KushnerMikalai)",
-  "contributors": [],
-  "bugs": {
-    "url": "",
-    "email": "nickolaikushner@gmail.com"
-  },
   "homepage": "",
   "engines": {
     "node": ">=4.0.0",
