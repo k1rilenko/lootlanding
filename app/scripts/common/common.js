@@ -5,6 +5,7 @@ app.common = {
 		this.initScript('svg4everybody.min', 'svg4everybody', () => {
 			svg4everybody();
 		});
+		this.showRules();
 	},
 	addScriptFile(nameFile, callback) {
 		const body = document.getElementsByTagName('body')[0];
@@ -54,5 +55,13 @@ app.common = {
 		if (!hasLibs) {
 			this.addStyleFile(nameFile);
 		}
+	},
+	showRules() {
+		const button = document.querySelector('.rules__button');
+		const container = document.querySelector('.rules__content');
+		button.addEventListener('click', () => {
+			container.classList.toggle('rules__content_show');
+			button.classList.toggle('rules__button_active');
+		});
 	}
 };

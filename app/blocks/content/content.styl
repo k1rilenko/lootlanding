@@ -1,0 +1,203 @@
+.page
+	.content
+		display block
+		&__container
+			max-width 1350px
+			margin 0 auto
+			padding 0 60px
+			background-image url(../images/background.jpg)
+			background-repeat no-repeat
+			background-color #051a1d
+	.head
+		padding-top 20px
+		display flex
+		flex-direction column
+		justify-content center
+		align-items center
+		&__logo
+			position relative
+			width 516px
+			height 204px
+			background-image url(../images/logo.png)
+			background-repeat no-repeat
+			background-position center
+			margin-bottom 40px
+			&-image
+				position absolute
+				left 50%
+				top 45%
+				transform translate(-50%, -50%)
+		&__title
+			color #242424
+			font-size 111px
+			font-weight 900
+			text-transform uppercase
+			margin-bottom 48px
+		&__prize
+			margin-bottom -48px
+			&-title
+				display flex
+				justify-content center
+				color #242424
+				font-size 61px
+				font-weight 900
+				text-transform uppercase
+			&-background
+				position relative
+				width 1133px
+				height 576px
+				top -75px
+				background-image url(../images/prize.png)
+				background-position center
+				background-size cover
+			&-value
+				position relative
+				left 50%
+				top 53%
+				text-align center
+				transform translate(-50%, -50%)
+				font-size 226px
+				font-weight 900
+				color #f6f8e7
+				text-shadow 0 0 26px rgba(255, 250, 126, .59)
+		&__button
+			box-shadow: 0 3px 11px 1px rgba(0, 0, 0, .57), inset 0 0 0 #3dce9d, inset 0 0 0 rgba(255, 255, 255, .28)
+			border-radius 30px
+			background-color #141416
+			background-image linear-gradient(to top, #007e59 0, #039268 24%, #00e290 76%, #00e2a7 100%)
+			font-size 51px
+			font-weight 900
+			color #fff
+			text-shadow 0 0 3px rgba(192, 255, 225, .17)
+			text-transform uppercase
+			padding 50px 70px 31px
+			line-height 1
+			outline none
+			border none
+			&-wrapper
+				margin-bottom 127px
+		&__timer-block
+			display flex
+			padding 33px 0 35px
+			flex-direction column
+			align-items center
+			position relative
+			width 940px
+			height 254px
+			background-image url(../images/timer_bg.png)
+			margin-bottom 56px
+		&__timer-title
+			font-size 47px
+			font-weight 900
+			color #e9efc8
+			text-transform uppercase
+			margin-bottom 10px
+		&__timer-value
+			position relative
+			top -10px
+			font-size 151px
+			color #e9efc8
+			font-weight 900
+			line-height 1
+	.table
+		display flex
+		width 100%
+		flex-direction column
+		border-radius 20px
+		margin-bottom 113px
+		padding 0 10.5%
+		&__title
+			font-size 46px
+			font-weight 900
+			color #c7c7c7
+			text-align center
+			margin-bottom 30px
+		&__table
+			display flex
+			width 100%
+			flex-direction column
+		&__head
+			width 100%
+			display flex
+			background-color #0f1419
+			padding-bottom 30px
+			border-top-left-radius 20px
+			border-top-right-radius 20px
+
+			.table__wrapper
+				background-color #1e262f
+				box-shadow inset 2px 4px 7px 1px rgba(0, 0, 0, .26)
+				display flex
+				width 100%
+				border-radius 20px
+		&__value
+			width 50%
+			color #f5f5f5
+			font-size 28px
+			font-weight 900
+			text-align center
+			text-transform uppercase
+			line-height 72px
+		&__body
+			display flex
+			flex-direction column
+			width 100%
+			background-color #0f1419
+			padding 0 42px
+			border-bottom-left-radius 20px
+			border-bottom-right-radius 20px
+			.table__wrapper
+				display flex
+				width 100%
+				margin-bottom 32px
+				.table__value
+					box-shadow inset 2px 4px 7px 1px rgba(0, 0, 0, .26)
+					border-radius 20px
+					background-color #1e262f
+					line-height 72px
+					margin 0 9px
+	.rules
+		padding-bottom 35px
+		&__container
+			display flex
+			flex-direction column
+		&__button
+			position relative
+			margin 0 auto
+			max-width 408px
+			outline none
+			border-radius 20px
+			background-color #242f39
+			font-size 61px
+			font-weight 900
+			color #98a4b5
+			padding 22px 76px 12px 61px
+			text-transform uppercase
+			line-height 1
+			margin-bottom 50px
+			border none
+			transition opacity .3s
+			&:hover
+				opacity .6
+			&:before
+				position absolute
+				content ''
+				width 0
+				height 0
+				border-left 8px solid transparent
+				border-right 8px solid transparent
+				border-top 16px solid #98a4b5
+				top 50%
+				transform translateY(-50%)
+				right 37px
+				transition .3s
+			&_active
+				&:before
+					transform rotate(180deg)
+					top calc(50% - 10px)
+		&__content
+			display none
+			color #acbacd
+			&_show
+				display block
+

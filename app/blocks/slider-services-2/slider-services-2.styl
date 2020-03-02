@@ -1,10 +1,25 @@
-.slider-services
+.slider
+	position relative
 	display block
-	margin-bottom 50px
-	&__op,
-	&__slider
-		display none
-		&.slick-initialized
-			display block
-	&__icon
-		max-width 100%
+	margin-bottom 80px
+	&__title
+		display flex
+		justify-content center
+		text-align center
+		position relative
+		width 372px
+		height 134px
+		background-image url(../images/slider-title-bg.png)
+		margin 0 auto
+		&-value
+			align-self center
+			position absolute
+			font-size 93px
+			font-weight 900
+			text-transform uppercase
+			text-shadow 0 0 26px rgba(255, 250, 126, .59)
+			color #ffffff
+			line-height 1
+	&__content
+		background-image url(../images/slider-bg.png)
+		height 630px

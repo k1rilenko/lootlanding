@@ -8,13 +8,14 @@ app.sliderServices2 = {
 		app.common.initStyle('slick');
 	},
 	runSlider(selector, options) {
-		const $slider = $(selector || '.slider-services__op');
+		const $slider = $(selector || '.slider__op');
 		$slider.slick(options);
 	},
 	options: {
-		slidesToShow: 6,
+		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
+		arrows: false,
 		responsive: [{
 			breakpoint: 1600,
 			settings: {

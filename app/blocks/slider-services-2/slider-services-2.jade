@@ -1,5 +1,7 @@
 mixin slider-services-2()
-	+b.slider-services&attributes(attributes)
+	+b.slider&attributes(attributes)
+		+e('div').title
+			+e('h2').title-value игры
 		+e.content
 			+e.op
 				for slide in getData('slider')
