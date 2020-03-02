@@ -2,6 +2,8 @@
 	position relative
 	display block
 	margin-bottom 80px
+	+below($md)
+		margin-bottom 38px
 	&__title
 		display flex
 		justify-content center
@@ -11,6 +13,10 @@
 		height 134px
 		background-image url(../images/slider-title-bg.png)
 		margin 0 auto
+		+below($md)
+			width 183px
+			height 66px
+			background-image url(../images/slider-title-bg_mobile.png)
 		&-value
 			align-self center
 			position absolute
@@ -20,9 +26,16 @@
 			text-shadow 0 0 26px rgba(255, 250, 126, .59)
 			color #ffffff
 			line-height 1
+			+below($md)
+				font-size 46px
+			+below(430px)
+				font-size 30px
 	&__content
 		background-image url(../images/slider-bg.png)
 		height 630px
+		+below($md)
+			background-image url(../images/slider-bg_mobile.png)
+			height 336px
 	&__link
 		display flex
 		width 100%
@@ -30,7 +43,15 @@
 		min-height 630px
 		justify-content center
 		align-items center
+		+below($md)
+			min-height 336px
 	&__image
 		max-width 400px
 		max-height 400px
-
+		+below($md)
+			width 240px
+			height 240px
+	&__icon
+		width 100%
+		height auto
+		object-fit cover

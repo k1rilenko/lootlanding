@@ -15,35 +15,6 @@ app.sliderServices2 = {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
-		arrows: false,
-		responsive: [{
-			breakpoint: 1600,
-			settings: {
-				slidesToShow: 5,
-				infinite: true
-			}
-		}, {
-			breakpoint: 1300,
-			settings: {
-				slidesToShow: 4
-			}
-		}, {
-			breakpoint: 991,
-			settings: {
-				slidesToShow: 3
-			}
-		}, {
-			breakpoint: 767,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1
-			}
-		}, {
-			breakpoint: 575,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1
-			}
-		}]
+		arrows: false
 	}
 };

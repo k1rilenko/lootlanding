@@ -7,41 +7,42 @@ block head
 	- var pageTitle = 'Sunny spring';
 
 block content
-		+content
-			+e.wrap
+	+content
+		+e.container
+			+b('section').head
+				+e('p').logo
+					+e('picture').picture
+						+e('source')(srcset="./assets/images/logo_img_mobile.png" media="(max-width: 991px)")
+						+e('img').logo-image(src="./assets/images/logo_img.png")
+				+e.title-block
+					+e('h2').title Sunny spring
+				+e.prize
+					+e('span').prize-title главный приз
+					+e.prize-background
+						+e('p').prize-value €40,000
+				+e.button-wrapper
+					+e('button').button.button сделать депозит
+				+e.timer-block
+					+e('span').timer-title до окончания осталось:
+					+e('p').timer-value 00:00:00:00
+			+b('section').table
+				+e('h2').title ПРИЗОВОЙ ФОНД
+				+e('table').table
+					+e('thead').head
+						+e('tr').wrapper
+							+e('td').value Место
+							+e('td').value Приз
+					+e('tbody').body
+						-for (var x = 0; x < 13; x++)
+							+e('tr').wrapper
+								+e('td').value Место
+								+e('td').value Приз
+			+slider-services-2
+			+b('section').rules
 				+e.container
-					+b('section').head
-						+e('p').logo
-							+e('img').logo-image(src="./assets/images/logo_img.png")
-						+e.title-block
-							+e('h2').title Sunny spring
-						+e.prize
-							+e('span').prize-title главный приз
-							+e.prize-background
-								+e('p').prize-value €40,000
-						+e.button-wrapper
-							+e('button').button.button сделать депозит
-						+e.timer-block
-							+e('span').timer-title до окончания осталось:
-							+e('p').timer-value 00:00:00:00
-					+b('section').table
-						+e('h2').title ПРИЗОВОЙ ФОНД
-						+e('table').table
-							+e('thead').head
-								+e('tr').wrapper
-									+e('td').value Место
-									+e('td').value Приз
-							+e('tbody').body
-								-for (var x = 0; x < 13; x++)
-									+e('tr').wrapper
-										+e('td').value Место
-										+e('td').value Приз
-					+slider-services-2
-					+b('section').rules
-						+e.container
-							+e('button').button Правила
-							+e.content
-								p ПРАВИЛА И УСЛОВИЯ
-								ol
-									li 1. Принимая участие в акции, вы подтверждаете, что ознакомились с правилами ее проведения и принимаете их.
-									li 2.2. Акция проводится с 03:01 МСК 20 января 2020 г. до 03:01 МСК 30 марта 2020 г.
+					+e('button').button Правила
+					+e.content
+						p ПРАВИЛА И УСЛОВИЯ
+						ol
+							li 1. Принимая участие в акции, вы подтверждаете, что ознакомились с правилами ее проведения и принимаете их.
+							li 2.2. Акция проводится с 03:01 МСК 20 января 2020 г. до 03:01 МСК 30 марта 2020 г.

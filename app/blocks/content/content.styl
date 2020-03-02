@@ -4,10 +4,13 @@
 		&__container
 			max-width 1350px
 			margin 0 auto
-			padding 0 60px
 			background-image url(../images/background.jpg)
 			background-repeat no-repeat
 			background-color #051a1d
+			+below($xl)
+				background-position 50% 0
+			+below($md)
+				background-image url(../images/background_mobile.jpg)
 	.head
 		padding-top 20px
 		display flex
@@ -22,6 +25,12 @@
 			background-repeat no-repeat
 			background-position center
 			margin-bottom 40px
+			+below($lg)
+				width 254px
+				height 101px
+				background-image url(../images/logo_mobile.png)
+			+below($md)
+				margin-bottom 25px
 			&-image
 				position absolute
 				left 50%
@@ -33,8 +42,21 @@
 			font-weight 900
 			text-transform uppercase
 			margin-bottom 48px
+			+below($xl)
+				font-size 78px
+			+below($lg)
+				font-size 55px
+				color #082222
+			+below($md)
+				margin-bottom 25px
+				text-align center
+			+below(385px)
+				font-size 40px
 		&__prize
 			margin-bottom -48px
+			+below($xl)
+				width 100%
+				height auto
 			&-title
 				display flex
 				justify-content center
@@ -42,6 +64,10 @@
 				font-size 61px
 				font-weight 900
 				text-transform uppercase
+				+below($lg)
+					font-size 30px
+				+below($sm)
+					text-align center
 			&-background
 				position relative
 				width 1133px
@@ -50,6 +76,18 @@
 				background-image url(../images/prize.png)
 				background-position center
 				background-size cover
+				+below($xl)
+					width 100%
+					max-width 100%
+					background-repeat no-repeat
+					background-size contain
+				+below($md)
+					width 90%
+					background-image url(../images/prize_resize.png)
+					height 235px
+					margin 0 auto
+					top -10px
+					margin-bottom 65px
 			&-value
 				position relative
 				left 50%
@@ -60,6 +98,17 @@
 				font-weight 900
 				color #f6f8e7
 				text-shadow 0 0 26px rgba(255, 250, 126, .59)
+				+below($xl)
+					font-size 210px
+				+below($lg)
+					font-size 164px
+				+below($md)
+					top 50%
+					font-size 111px
+				+below($sm)
+					font-size 80px
+				+below($s)
+					font-size 60px
 		&__button
 			box-shadow: 0 3px 11px 1px rgba(0, 0, 0, .57), inset 0 0 0 #3dce9d, inset 0 0 0 rgba(255, 255, 255, .28)
 			border-radius 30px
@@ -74,8 +123,25 @@
 			line-height 1
 			outline none
 			border none
+			transition .1s
+			&:hover
+				opacity .8
+			+below($xl)
+				font-size 46px
+				padding 37px 70px 31px
+			+below($md)
+				font-size 30px
+				box-shadow 0 2px 5px 1px rgba(0, 0, 0, .57), inset 0 0 0 #3dce9d, inset 0 0 0 rgba(255, 255, 255, .28)
+				border-radius 15px
+				padding 30px 40px 19px
+				background-color #141416
+				background-image linear-gradient(to top, #007e59 0, #039268 24%, #00e290 76%, #00e2a7 100%)
+			+below(370px)
+				font-size 20px
 			&-wrapper
 				margin-bottom 127px
+				+below($md)
+					margin-bottom 54px
 		&__timer-block
 			display flex
 			padding 33px 0 35px
@@ -86,12 +152,31 @@
 			height 254px
 			background-image url(../images/timer_bg.png)
 			margin-bottom 56px
+			+below($lg)
+				height 100%
+				width 658px
+				max-height 178px
+				background-size contain
+				background-repeat no-repeat
+				padding 13px 0 20px
+			+below($md)
+				width 100%
+				max-width 462px
+				padding 18px 0 20px
+				margin-bottom 50px
 		&__timer-title
 			font-size 47px
 			font-weight 900
 			color #e9efc8
 			text-transform uppercase
 			margin-bottom 10px
+			+below($lg)
+				font-size 32px
+			+below($md)
+				font-size 23px
+				margin-bottom 0
+			+below(430px)
+				font-size 18px
 		&__timer-value
 			position relative
 			top -10px
@@ -99,6 +184,15 @@
 			color #e9efc8
 			font-weight 900
 			line-height 1
+			+below($lg)
+				top 0
+				font-size 110px
+			+below($md)
+				font-size 74px
+			+below(430px)
+				font-size 54px
+			+below(340px)
+				font-size 42px
 	.table
 		display flex
 		width 100%
@@ -106,12 +200,21 @@
 		border-radius 20px
 		margin-bottom 113px
 		padding 0 10.5%
+		+below($md)
+			padding 0 20px
+			margin-bottom 35px
+		+below($sm)
+			padding 0 10px
 		&__title
 			font-size 46px
 			font-weight 900
 			color #c7c7c7
 			text-align center
 			margin-bottom 30px
+			+below($md)
+				font-size 30px
+				color #fff
+				margin-bottom 20px
 		&__table
 			display flex
 			width 100%
@@ -123,21 +226,30 @@
 			padding-bottom 30px
 			border-top-left-radius 20px
 			border-top-right-radius 20px
-
+			+below($md)
+				border-top-left-radius 10px
+				border-top-right-radius 10px
+				padding-bottom 20px
 			.table__wrapper
 				background-color #1e262f
 				box-shadow inset 2px 4px 7px 1px rgba(0, 0, 0, .26)
 				display flex
 				width 100%
 				border-radius 20px
+				+below($md)
+					box-shadow inset 1px 2px 4px 1px rgba(0, 0, 0, .26)
+					border-radius 10px
 		&__value
 			width 50%
 			color #f5f5f5
 			font-size 28px
-			font-weight 900
 			text-align center
 			text-transform uppercase
 			line-height 72px
+			font-weight 700
+			+below($md)
+				font-size 18px
+				line-height 48px
 		&__body
 			display flex
 			flex-direction column
@@ -146,21 +258,38 @@
 			padding 0 42px
 			border-bottom-left-radius 20px
 			border-bottom-right-radius 20px
+			+below($md)
+				padding 0 20px
+			+below(430px)
+				padding 0 10px
 			.table__wrapper
 				display flex
 				width 100%
 				margin-bottom 32px
+				+below($md)
+					margin-bottom 20px
 				.table__value
 					box-shadow inset 2px 4px 7px 1px rgba(0, 0, 0, .26)
 					border-radius 20px
 					background-color #1e262f
 					line-height 72px
 					margin 0 9px
+					font-weight 700
+					+below($md)
+						font-size 18px
+						line-height 48px
+						border-radius 10px
+						margin 0 4px
 	.rules
 		padding-bottom 35px
 		&__container
 			display flex
 			flex-direction column
+			padding 0 60px
+			+below($md)
+				padding 0 20px
+			+below($s)
+				padding 0 10px
 		&__button
 			position relative
 			margin 0 auto
@@ -177,6 +306,14 @@
 			margin-bottom 50px
 			border none
 			transition opacity .3s
+			+below($xl)
+				font-size 48px
+			+below($md)
+				font-size 22px
+				padding 13px 51px
+				border-radius 10px
+			+below($sm)
+				margin-bottom 20px
 			&:hover
 				opacity .6
 			&:before
@@ -191,13 +328,20 @@
 				transform translateY(-50%)
 				right 37px
 				transition .3s
+				+below($md)
+					right 19px
+					border-left 4px solid transparent
+					border-right 4px solid transparent
+					border-top 8px solid #98a4b5
 			&_active
 				&:before
 					transform rotate(180deg)
 					top calc(50% - 10px)
+					+below($md)
+						top calc(50% - 6px)
 		&__content
+			font-weight 700
 			display none
 			color #acbacd
 			&_show
 				display block
-
